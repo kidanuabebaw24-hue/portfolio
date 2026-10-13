@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Kidanu Abebaw | Software Developer — Web, Mobile & Backend</title>
+    <meta
+      name="description"
+      content="Explore the software development projects, technical skills, and services of Kidanu Abebaw, a Computer Engineering student and software developer focused on practical digital solutions."
+    />
+    <meta name="author" content="Kidanu Abebaw" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kidanu Abebaw | Software Developer — Web, Mobile & Backend" />
+    <meta
+      property="og:description"
+      content="Software developer focused on building practical web applications, mobile experiences, and backend systems."
+    />
+    <meta property="og:url" content="https://kidanuabebaw.dev" />
+    <!-- TODO: Add real OG image to public/images/og-image.png and uncomment: -->
+    <!-- <meta property="og:image" content="https://kidanuabebaw.dev/images/og-image.png" /> -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kidanu Abebaw | Software Developer" />
+    <meta name="twitter:description" content="Software developer building practical web, mobile, and backend solutions." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent theme flash: apply saved theme before React renders -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('portfolio-theme');
+          var theme = saved === 'dark' || saved === 'light'
+            ? saved
+            : window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'dark'; // Default dark
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.classList.add(theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
