@@ -17,7 +17,7 @@ export const experiences: ExperienceEntry[] = [
   {
     id: 'stratiq-project',
     type: 'project',
-    title: 'Lead Developer — StratIQ',
+    title: 'Lead Developer: StratIQ',
     organization: 'Personal Project',
     startDate: '2024',
     current: true,
@@ -28,7 +28,7 @@ export const experiences: ExperienceEntry[] = [
   {
     id: 'civicfix-project',
     type: 'project',
-    title: 'Full-Stack Developer — CivicFix',
+    title: 'Full-Stack Developer: CivicFix',
     organization: 'Academic Team Project',
     startDate: '2024',
     current: true,
@@ -39,7 +39,7 @@ export const experiences: ExperienceEntry[] = [
   {
     id: 'ameco-project',
     type: 'project',
-    title: 'Full-Stack Developer — AMECO-MMS',
+    title: 'Full-Stack Developer: AMECO-MMS',
     organization: 'Academic Team Project',
     startDate: '2024',
     endDate: '2024',

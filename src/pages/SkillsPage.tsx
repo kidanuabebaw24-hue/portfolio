@@ -82,7 +82,7 @@ export default function SkillsPage() {
             style={{ color: 'var(--text-muted)', fontStyle: 'italic' }}
           >
             This list reflects technologies I've used across projects and coursework. Proficiency
-            varies — I don't claim equal depth in every technology listed.
+            varies, and I don't claim equal depth in every technology listed.
           </motion.p>
         </div>
       </section>

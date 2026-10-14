@@ -11,9 +11,10 @@ export const navItems: NavItem[] = [
 ];
 
 export const socialLinks = {
-  github: 'https://github.com/kidanuabebaw', // TODO: Replace with your actual GitHub URL
-  linkedin: 'https://linkedin.com/in/kidanu-abebaw', // TODO: Replace with your actual LinkedIn URL
-  email: 'kidanu@example.com', // TODO: Replace with your actual email address
+  github: 'https://github.com/kidanuabebaw24-hue',
+  linkedin: 'https://www.linkedin.com/in/kidanu-abebaw-67957a43b',
+  email: 'kidanuabebaw24@gmail.com',
+  phone: '+251953248197',
 };
 
 export const personalInfo = {
@@ -21,7 +22,9 @@ export const personalInfo = {
   title: 'Software Developer',
   tagline: 'Web, Mobile & Backend Development',
   location: 'Bahir Dar, Ethiopia',
+  phone: '+251953248197',
   availability: 'Open to Freelance Projects & Remote Opportunities',
   cvPath: '/files/Kidanu-Abebaw-CV.pdf', // Place your CV at public/files/Kidanu-Abebaw-CV.pdf
-  isAvailable: true, // Set to false to hide the availability badge
+  avatar: '/images/profile.jpg',
+  isAvailable: false, // Set to false to hide the availability badge
 };

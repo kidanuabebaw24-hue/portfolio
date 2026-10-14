@@ -85,7 +85,7 @@ export default function AboutPreview() {
                 technology-driven entrepreneurship.
               </p>
               <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75 }}>
-                I enjoy building software that addresses practical challenges — from trading analytics
+                I enjoy building software that addresses practical challenges from trading analytics
                 and civic issue reporting to digital workflow management. Through my projects, I
                 continue developing skills in frontend interfaces, backend APIs, database design, and
                 software integration.

@@ -9,7 +9,7 @@ export const projects: Project[] = [
     description:
       'StratIQ is a trading journal platform built to help traders improve through structured reflection and data. It allows users to log trades, review performance analytics, track emotional state during trading, and build a long-term record of their decision-making patterns. The platform aims to help traders move from reactive behavior toward disciplined, evidence-based decisions.',
     category: 'Full-Stack Application',
-    status: 'in-progress',
+    status: 'completed',
     technologies: ['Flutter', 'Node.js', 'Express.js', 'PostgreSQL', 'Neon PostgreSQL'],
     featured: true,
     problem:
@@ -20,15 +20,15 @@ export const projects: Project[] = [
       'Traders who want to move from emotional trading to systematic decision-making',
     ],
     solution:
-      'StratIQ provides a structured digital journal where traders can record each trade with all relevant context—entry, exit, rationale, emotional state, and outcome. The platform then surfaces patterns and analytics that help traders understand their habits, track their improvement, and make more informed decisions.',
+      'StratIQ provides a structured digital journal where traders can record each trade with all relevant context including entry, exit, rationale, emotional state, and outcome. The platform then surfaces patterns and analytics that help traders understand their habits, track their improvement, and make more informed decisions.',
     features: [
       { name: 'User Authentication', description: 'Secure registration and login system', status: 'implemented' },
       { name: 'Trade Logging', description: 'Create, edit, and manage individual trade records with full context', status: 'implemented' },
-      { name: 'Performance Analytics', description: 'Visual breakdowns of win rate, profit/loss, and streaks', status: 'in-progress' },
-      { name: 'Psychology Tracking', description: 'Emotion and mindset tags for each trade session', status: 'in-progress' },
-      { name: 'Journal Entries', description: 'Free-form notes and trade screenshot uploads', status: 'in-progress' },
-      { name: 'AI Trade Review', description: 'AI-assisted review of trade patterns and suggestions', status: 'planned' },
-      { name: 'Multi-Account Support', description: 'Manage trades across multiple accounts or strategies', status: 'planned' },
+      { name: 'Performance Analytics', description: 'Visual breakdowns of win rate, profit/loss, and streaks', status: 'implemented' },
+      { name: 'Psychology Tracking', description: 'Emotion and mindset tags for each trade session', status: 'implemented' },
+      { name: 'Journal Entries', description: 'Free-form notes and trade screenshot uploads', status: 'implemented' },
+      { name: 'AI Trade Review', description: 'AI-assisted review of trade patterns and suggestions', status: 'implemented' },
+      { name: 'Multi-Account Support', description: 'Manage trades across multiple accounts or strategies', status: 'implemented' },
     ],
     contribution:
       'I am the sole developer of StratIQ. I designed the product concept, defined the feature set, built the Flutter mobile frontend, designed the PostgreSQL schema, and implemented the Node.js/Express backend API.',
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     description:
       'CivicFix is a civic reporting system that bridges the gap between citizens and local authorities. Citizens can submit reports about infrastructure issues, public safety concerns, and community problems. Authorities can review, categorize, assign, and resolve reported issues through a structured administrative workflow.',
     category: 'Full-Stack Application',
-    status: 'in-progress',
+    status: 'completed',
     technologies: ['React', 'Spring Boot', 'Flutter', 'Java', 'PostgreSQL'],
     featured: true,
     problem:
@@ -103,7 +103,7 @@ export const projects: Project[] = [
     title: 'AMECO-MMS',
     summary: 'A media workflow management system designed to organize news submission, editorial review, and publication processes for a media organization.',
     description:
-      'AMECO-MMS is a media management system that streamlines how content moves through a newsroom—from initial submission to editorial review and final publication. Different roles have different levels of access and responsibility, enabling a structured and traceable editorial workflow.',
+      'AMECO-MMS is a media management system that streamlines how content moves through a newsroom from initial submission to editorial review and final publication. Different roles have different levels of access and responsibility, enabling a structured and traceable editorial workflow.',
     category: 'Web Application',
     status: 'completed',
     technologies: ['React', 'Node.js', 'Express.js', 'PostgreSQL'],
@@ -145,7 +145,59 @@ export const projects: Project[] = [
       'Support multimedia content types beyond text-based articles',
     ],
   },
+  {
+    id: 'bdu-document-request-system',
+    slug: 'bdu-document-request-system',
+    title: 'BDU Document Request System',
+    summary: 'A web-based academic document request system developed for Bahir Dar University, enabling students to submit and track requests for official documents such as transcripts, degree certificates, and letters of completion.',
+    description:
+      'The BDU Document Request System is an academic information system designed to digitize and streamline the process by which students at Bahir Dar University request official documents from the registrar office. Prior to this system, students relied on manual, in-person processes to request documents such as transcripts and degree certificates. This application provides a structured digital interface for students to initiate requests and for staff to manage, process, and update request statuses through an administrative workflow.',
+    category: 'Web Application / Academic Information System',
+    status: 'in-progress',
+    technologies: ['React', 'Spring Boot', 'Java', 'MySQL'],
+    featured: true,
+    problem:
+      'The traditional document request process at Bahir Dar University was paper-based and required students to visit offices in person, wait in queues, and follow up manually with no visibility into request status. This created bottlenecks for both students and administrative staff, especially for graduates who needed documents remotely after completing their studies.',
+    targetUsers: [
+      'Current and former students of Bahir Dar University requesting official academic documents',
+      'Registrar office staff responsible for processing and approving document requests',
+      'University administrators overseeing request workflows and system configuration',
+    ],
+    solution:
+      'The system provides a web interface where students can log in, select the type of document they need, submit a formal request, and track the status of that request over time. Administrative staff use a separate dashboard to review incoming requests, update statuses, and manage the processing workflow. The goal is to replace the manual process with a traceable, structured digital pipeline.',
+    features: [
+      { name: 'Student Authentication', description: 'Students can register and log in to access the request portal', status: 'implemented' },
+      { name: 'Document Request Submission', description: 'Students can submit requests for Student Copy, Transcript, Degree Certificate, or Letter of Completion', status: 'implemented' },
+      { name: 'Request Status Tracking', description: 'Students can view the current status of their submitted requests', status: 'implemented' },
+      { name: 'Admin Request Dashboard', description: 'Staff can view, filter, and manage incoming document requests', status: 'in-progress' },
+      { name: 'Status Update Workflow', description: 'Staff can update request statuses to reflect processing stages', status: 'in-progress' },
+      { name: 'Role-Based Access Control', description: 'Separate access levels for students and administrative staff', status: 'implemented' },
+      { name: 'Email Notification', description: 'Automated notifications to students when request status changes', status: 'planned' },
+      { name: 'Document Ready Pickup Confirmation', description: 'Notify students when their document is ready for collection', status: 'planned' },
+    ],
+    contribution:
+      'I worked on the React frontend, including the student-facing request portal and the administrative dashboard UI. I also contributed to the Spring Boot backend API, including the request management endpoints and the role-based access control layer. This was developed as an academic project; it is not yet officially deployed or adopted by Bahir Dar University.',
+    challenges: [
+      'Designing a request lifecycle state machine that accurately reflected the real-world document processing steps used by university staff',
+      'Building role-separated views within a single application while keeping the codebase maintainable',
+      'Handling the variety of document types and their different processing requirements within a unified data model',
+    ],
+    decisions: [
+      'Chose Spring Boot for the backend because of its strong support for REST API design, security configuration, and Java ecosystem familiarity within the team',
+      'Used React for the frontend to support a rich, interactive dashboard experience for administrative users',
+      'Used MySQL as the relational database to model the structured relationships between students, requests, and document types',
+      'Deferred email notifications to a later phase to keep the initial implementation focused on core request and tracking functionality',
+    ],
+    futureImprovements: [
+      'Integrate automated email and SMS notifications for request status changes',
+      'Add a document pickup confirmation and digital acknowledgment workflow',
+      'Support bulk request processing for administrative efficiency',
+      'Build reporting tools to give administrators visibility into request volumes and processing times',
+      'Explore digital document delivery for graduates who cannot collect in person',
+    ],
+  },
 ];
 
 export const getFeaturedProjects = () => projects.filter((p) => p.featured);
 export const getProjectBySlug = (slug: string) => projects.find((p) => p.slug === slug);
+

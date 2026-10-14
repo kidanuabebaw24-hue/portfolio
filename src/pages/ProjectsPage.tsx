@@ -1,5 +1,5 @@
 import PageContainer from '../components/layout/PageContainer';
-import FeaturedProjects from '../components/home/FeaturedProjects';
+import { ProjectCard } from '../components/home/FeaturedProjects';
 import { projects } from '../data/projects';
 import SectionHeading from '../components/common/SectionHeading';
 import { motion } from 'framer-motion';
@@ -17,12 +17,17 @@ export default function ProjectsPage() {
             <SectionHeading
               label="Projects"
               title="All Projects"
-              description="Software I've designed and built — each one a real attempt to solve a practical problem."
+              description="Software I've designed and built, each one a real attempt to solve a practical problem."
             />
           </motion.div>
+
+          <div className="project-grid mt-8">
+            {projects.map((project, i) => (
+              <ProjectCard key={project.id} project={project} index={i} />
+            ))}
+          </div>
         </div>
       </section>
-      <FeaturedProjects projects={projects} showAll />
     </PageContainer>
   );
 }

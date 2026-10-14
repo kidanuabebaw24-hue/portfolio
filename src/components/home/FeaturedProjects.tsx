@@ -147,7 +147,7 @@ export default function FeaturedProjects({ projects, showAll = false }: Featured
           <SectionHeading
             label="Featured Projects"
             title="What I've Built"
-            description="A selection of projects I've designed, developed, and shipped — each one addressing a real problem."
+            description="A selection of projects I've designed, developed, and shipped, each one addressing a real problem."
             id="projects-heading"
           />
         </motion.div>

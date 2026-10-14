@@ -4,6 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { socialLinks } from '../../data/navigation';
 
 // ─── Zod Schema ───────────────────────────────────────────────────────────────
 const schema = z.object({
@@ -84,11 +85,20 @@ export default function ContactForm() {
     setErrorMessage('');
 
     if (!isEmailConfigured) {
-      // Show honest configuration notice
-      setSubmitState('error');
-      setErrorMessage(
-        'Contact form delivery is not yet configured. Please email me directly at the address listed below.',
+      // Seamless fallback: open pre-filled email to Kidanu directly
+      const subject = encodeURIComponent(`Project Inquiry: ${data.projectType} from ${data.name}`);
+      const body = encodeURIComponent(
+        `Hi Kidanu,\n\n` +
+        `Name: ${data.name}\n` +
+        `Email: ${data.email}\n` +
+        `Project Type: ${data.projectType}\n` +
+        `Estimated Budget: ${data.budget || 'Not specified'}\n` +
+        `Timeline: ${data.timeline || 'Not specified'}\n\n` +
+        `Project Description:\n${data.description}\n`
       );
+      window.location.href = `mailto:${socialLinks.email}?subject=${subject}&body=${body}`;
+      setSubmitState('success');
+      reset();
       return;
     }
 
@@ -156,25 +166,6 @@ export default function ContactForm() {
       aria-label="Contact form"
       className="flex flex-col gap-5"
     >
-      {/* Configuration notice */}
-      {!isEmailConfigured && (
-        <div
-          className="card p-4 flex items-start gap-3"
-          style={{
-            background: 'rgba(251, 191, 36, 0.08)',
-            border: '1px solid rgba(251, 191, 36, 0.25)',
-          }}
-          role="note"
-          aria-label="Setup required"
-        >
-          <AlertCircle size={18} style={{ color: '#fbbf24', flexShrink: 0, marginTop: 1 }} />
-          <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-            <strong style={{ color: 'var(--text-primary)' }}>Setup required:</strong> Email delivery
-            is not yet configured. Set up EmailJS environment variables to enable form submissions.
-            See <code className="text-xs px-1 py-0.5 rounded" style={{ background: 'var(--bg-elevated)' }}>README.md</code> for instructions.
-          </p>
-        </div>
-      )}
 
       {/* Name */}
       <div className="form-group">

@@ -6,7 +6,7 @@ export const services: Service[] = [
     title: 'Website Development',
     icon: 'Globe',
     description:
-      'Design and develop clean, modern websites for businesses, professionals, and organizations — from landing pages to full multi-page sites.',
+      'Design and develop clean, modern websites for businesses, professionals, and organizations, from landing pages to full multi-page sites.',
     businessValue:
       'A well-built website builds trust with customers and serves as your business\'s most consistent marketing tool.',
     deliverables: [
@@ -21,7 +21,7 @@ export const services: Service[] = [
     title: 'Web Application Development',
     icon: 'LayoutDashboard',
     description:
-      'Build functional web applications with complex requirements — dashboards, management systems, multi-role tools, and internal workflow software.',
+      'Build functional web applications with complex requirements such as dashboards, management systems, multi-role tools, and internal workflow software.',
     businessValue:
       'Custom web applications reduce manual processes, organize your team\'s work, and give you a system tailored to how your business actually operates.',
     deliverables: [
@@ -67,7 +67,7 @@ export const services: Service[] = [
     title: 'Application Improvements',
     icon: 'Wrench',
     description:
-      'Improve, fix, and extend an existing application — whether it\'s broken functionality, poor responsiveness, or missing features.',
+      'Improve, fix, and extend an existing application, whether it\'s broken functionality, poor responsiveness, or missing features.',
     businessValue:
       'Getting more out of software you\'ve already invested in is often more cost-effective than starting from scratch.',
     deliverables: [

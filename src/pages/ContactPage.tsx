@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { Github, Linkedin } from '../components/common/Icons';
 import PageContainer from '../components/layout/PageContainer';
 import ContactForm from '../components/contact/ContactForm';
@@ -15,16 +15,23 @@ const contactInfo = [
     isExternal: false,
   },
   {
+    icon: Phone,
+    label: 'Phone',
+    value: socialLinks.phone,
+    href: `tel:${socialLinks.phone}`,
+    isExternal: false,
+  },
+  {
     icon: Github,
     label: 'GitHub',
-    value: 'github.com/kidanuabebaw',
+    value: 'github.com/kidanuabebaw24-hue',
     href: socialLinks.github,
     isExternal: true,
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/kidanu-abebaw',
+    value: 'linkedin.com/in/kidanu-abebaw-67957a43b',
     href: socialLinks.linkedin,
     isExternal: true,
   },
@@ -102,7 +109,7 @@ export default function ContactPage() {
                           <a
                             href={href}
                             {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                            className="text-sm font-medium"
+                            className="text-sm font-medium break-all"
                             style={{ color: 'var(--accent)' }}
                           >
                             {value}

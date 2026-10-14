@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, ArrowUp, Code2 } from 'lucide-react';
+import { Mail, ArrowUp, Code2, Phone } from 'lucide-react';
 import { Github, Linkedin } from '../common/Icons';
 import { navItems, socialLinks, personalInfo } from '../../data/navigation';
 
@@ -69,6 +69,14 @@ export default function Footer() {
               >
                 <Mail size={18} style={{ color: 'var(--text-muted)' }} />
               </a>
+              <a
+                href={`tel:${socialLinks.phone}`}
+                className="btn btn-ghost btn-icon"
+                aria-label="Call phone"
+                title="Phone"
+              >
+                <Phone size={18} style={{ color: 'var(--text-muted)' }} />
+              </a>
             </div>
           </div>
 
@@ -92,6 +100,18 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <a
+                  href={personalInfo.cvPath}
+                  download="Kidanu-Abebaw-CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm transition-colors"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  Resume / CV
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -106,6 +126,9 @@ export default function Footer() {
             <div className="flex flex-col gap-2 text-sm" style={{ color: 'var(--text-secondary)' }}>
               <a href={`mailto:${socialLinks.email}`} className="hover:text-accent transition-colors">
                 {socialLinks.email}
+              </a>
+              <a href={`tel:${socialLinks.phone}`} className="hover:text-accent transition-colors">
+                {socialLinks.phone}
               </a>
               <span>{personalInfo.location}</span>
               <span className="text-sm" style={{ color: 'var(--accent)' }}>

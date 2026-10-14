@@ -58,22 +58,6 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 py-20">
           {/* Text content */}
           <div className="flex-1 max-w-2xl">
-            {/* Availability badge */}
-            {personalInfo.isAvailable && (
-              <motion.div
-                custom={0}
-                variants={fadeUp}
-                initial="hidden"
-                animate="visible"
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="badge badge-success">
-                  <span className="status-dot" />
-                  {personalInfo.availability}
-                </span>
-              </motion.div>
-            )}
-
             {/* Name */}
             <motion.p
               custom={1}
@@ -119,7 +103,7 @@ export default function Hero() {
                 }}
               >
                 <span className="gradient-text">{personalInfo.title}</span>
-                {' — '}
+                {' · '}
                 {personalInfo.tagline}
               </h2>
             </motion.div>
@@ -206,6 +190,8 @@ export default function Hero() {
               <a
                 href={personalInfo.cvPath}
                 download="Kidanu-Abebaw-CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn btn-ghost btn-lg"
                 aria-label="Download CV"
               >
@@ -254,31 +240,24 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.7, ease: 'easeOut' }}
             className="flex-shrink-0"
-            aria-hidden="true"
           >
             <div className="relative">
               {/* Outer decorative ring */}
               <div
+                className="relative rounded-full p-1"
                 style={{
-                  width: 'clamp(220px, 28vw, 320px)',
-                  height: 'clamp(220px, 28vw, 320px)',
-                  borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+                  width: 'clamp(240px, 30vw, 340px)',
+                  height: 'clamp(240px, 30vw, 340px)',
                   background: 'linear-gradient(135deg, var(--accent-dark), var(--accent), var(--accent-light))',
-                  padding: '3px',
                   boxShadow: 'var(--shadow-accent)',
                 }}
               >
-                {/* Avatar card */}
-                <div
-                  className="w-full h-full flex items-center justify-center avatar-initials"
-                  style={{
-                    borderRadius: '29% 69% 69% 29% / 29% 29% 69% 69%',
-                    fontSize: 'clamp(3rem, 7vw, 4.5rem)',
-                    background: 'var(--bg-elevated)',
-                  }}
-                >
-                  <span style={{ color: 'var(--accent-light)' }}>KA</span>
-                </div>
+                <img
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  className="w-full h-full rounded-full object-cover"
+                  style={{ background: 'var(--bg-elevated)', objectPosition: 'center 20%' }}
+                />
               </div>
 
               {/* Floating skill badge */}

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Download, ArrowRight, Mail } from 'lucide-react';
+import { Download, ArrowRight, Mail, Phone } from 'lucide-react';
 import { Github, Linkedin } from '../components/common/Icons';
 import { Link } from 'react-router-dom';
 import PageContainer from '../components/layout/PageContainer';
@@ -35,7 +35,7 @@ const values = [
   },
   {
     title: 'Clear communication',
-    desc: 'I believe good software starts with understanding what the client or user actually needs — before writing a single line.',
+    desc: 'I believe good software starts with understanding what the client or user actually needs before writing a single line.',
   },
   {
     title: 'Honest representation',
@@ -58,27 +58,20 @@ export default function AboutPage() {
               className="flex-shrink-0"
             >
               <div
+                className="relative rounded-full p-1"
                 style={{
                   width: 'clamp(200px, 25vw, 280px)',
                   height: 'clamp(200px, 25vw, 280px)',
                   background: 'linear-gradient(135deg, var(--accent-dark), var(--accent), var(--accent-light))',
-                  borderRadius: '40% 60% 60% 40% / 40% 40% 60% 60%',
-                  padding: 3,
                   boxShadow: 'var(--shadow-accent)',
                 }}
               >
-                <div
-                  className="w-full h-full flex items-center justify-center"
-                  style={{
-                    borderRadius: '39% 59% 59% 39% / 39% 39% 59% 59%',
-                    background: 'var(--bg-elevated)',
-                    fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-                    fontWeight: 800,
-                    color: 'var(--accent-light)',
-                  }}
-                >
-                  KA
-                </div>
+                <img
+                  src={personalInfo.avatar}
+                  alt={personalInfo.name}
+                  className="w-full h-full rounded-full object-cover"
+                  style={{ background: 'var(--bg-elevated)', objectPosition: 'center 20%' }}
+                />
               </div>
             </motion.div>
 
@@ -107,7 +100,7 @@ export default function AboutPage() {
               <div className="space-y-4 mb-6">
                 {[
                   `I'm a Computer Engineering student at Bahir Dar University with a strong interest in software engineering, full-stack development, mobile applications, and technology-driven entrepreneurship.`,
-                  `I enjoy building software that addresses practical challenges — from trading analytics and civic issue reporting to digital workflow management. Through my projects, I continue developing skills in frontend interfaces, backend APIs, database design, and software integration.`,
+                  `I enjoy building software that addresses practical challenges from trading analytics and civic issue reporting to digital workflow management. Through my projects, I continue developing skills in frontend interfaces, backend APIs, database design, and software integration.`,
                   `My goal is to work with ambitious teams and businesses, contribute to meaningful software projects, and grow into a stronger software engineer while building products of my own.`,
                 ].map((para, i) => (
                   <motion.p
@@ -133,6 +126,8 @@ export default function AboutPage() {
                 <a
                   href={personalInfo.cvPath}
                   download="Kidanu-Abebaw-CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn btn-primary"
                 >
                   <Download size={16} />
@@ -214,27 +209,39 @@ export default function AboutPage() {
               <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'var(--accent-muted)' }}>
                 <Mail size={18} style={{ color: 'var(--accent)' }} />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>Email</p>
-                <p className="text-sm" style={{ color: 'var(--accent)' }}>{socialLinks.email}</p>
+                <p className="text-sm break-all" style={{ color: 'var(--accent)' }}>{socialLinks.email}</p>
               </div>
             </a>
-            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="card p-4 flex items-center gap-4">
+            <a
+              href={`tel:${socialLinks.phone}`}
+              className="card p-4 flex items-center gap-4 group"
+            >
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'var(--accent-muted)' }}>
+                <Phone size={18} style={{ color: 'var(--accent)' }} />
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>Phone</p>
+                <p className="text-sm" style={{ color: 'var(--accent)' }}>{socialLinks.phone}</p>
+              </div>
+            </a>
+            <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="card p-4 flex items-center gap-4 group">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'var(--accent-muted)' }}>
                 <Github size={18} style={{ color: 'var(--accent)' }} />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>GitHub</p>
-                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{socialLinks.github}</p>
+                <p className="text-sm break-all" style={{ color: 'var(--text-secondary)' }}>github.com/kidanuabebaw24-hue</p>
               </div>
             </a>
-            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="card p-4 flex items-center gap-4">
+            <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="card p-4 flex items-center gap-4 group">
               <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'var(--accent-muted)' }}>
                 <Linkedin size={18} style={{ color: 'var(--accent)' }} />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>LinkedIn</p>
-                <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{socialLinks.linkedin}</p>
+                <p className="text-sm break-all" style={{ color: 'var(--text-secondary)' }}>linkedin.com/in/kidanu-abebaw-67957a43b</p>
               </div>
             </a>
           </div>
